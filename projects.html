@@ -1,33 +1,80 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Vansh Nagpal</title>
-    <!-- Add your CSS stylesheet link here -->
+  <meta charset="UTF-8">
+  <title>Vansh Nagpal</title>
+  <link rel="stylesheet" type="text/css" href="styles_main.css">
 </head>
+
 <body>
-    <!-- Header Section -->
-    <header>
-        <!-- Photo -->
-    </header>
+  <!-- Header Section -->
+  <header>
+    <!-- Photo -->
+  </header>
 
-    <!-- Navigation Menu -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="190_proj.html">College Fantasy Football App Prototype</a></li> <!-- Link to your Projects page -->
-        </ul>
-    </nav>
+  <!-- Tab Navigation -->
+  <div class="tab">
+    <button onclick="window.location.href='index.html'" class="tab-link active">Home</button>
+    <button onclick="window.location.href='#water-chatbot'" class="tab-link active">Water Quality Chatbot</button>
+    <button onclick="window.location.href='#learning-system'" class="tab-link active">Learning Management
+      System</button>
+
+  </div>
+  <!--Water ChatBot section-->
+  <section id="water-chatbot" class="boxed-section">
+    <h1>Water Quality Assesment Chatbot</h1>
+    <li>Source Code: </li>
+    <li><a href=""></a>Web Application Chatbot Coming Soon...</li>
+    <p>Water quality assesment is a crucial issue in the fields of public health and environmental science. Knowing the
+      contaminant and chemical nature of water found in wells, springs, streams, rivers, and other bodies of water is
+      key in determining the potability of water.
+      <br> <br>
+      To tackle this problem, I decided to pursue a project that can answer questions like "How safe is the water from
+      (insert desired outdoorwater source) to drink?". My program pulls real-time data from the <a
+        href="https://waterdata.usgs.gov/nwis/rt">United States Geological Survey(USGS)</a> via their REST API. It makes
+      a decision using an RBF-based approach based on various measured quantities like pH, Dissolved Oxygen, Turbidity,
+      Temperature, and specific conductance to determine the potability of water as a percentage.
+      <br> <br>
+      I implemented natural language processing(NLP) techniques to allow for natural conversation between the chatbot
+      and the user.
+      The source code behind my chatbot is implemented in Python and JavaScript.
+    </p>
+    <img src="images/water_quality_img.png" alt="Vansh Nagpal">
+
+  </section>
+
+  <!--Learning Managment System-->
+  <section id="learning-system" class="boxed-section">
+    <h1>Learning Management System(LMS) for Programming Languages</h1>
+    <li>Source Code: <a href="https://github.com/vnagpal25/Waterboys_LMS">GitHub</a></li>
+    <li>Web Application Prototype: <a href="lms_project.html">Proto.io</a></li>
+    <p>
+      In a world where automation and technology are becoming increasingly ubiquitous, having the knowledge of a programming knowledge can be extremely beneficial to further people's career options.
+      <br><br>
+      For this reason, with a team of peers, I embarked on creating a Learning Management System(LMS) that provides prospective students and teachers alike an interface through which they can learn a new programming language(Python or JavaScript).
+      We implemented our command-line based interface for the LMS in Java, using object-oriented principles and following the SCRUM methodology to track our sprint progress
+    </p>
+  </section>
 
 
 
 
 
+  <!--Relevant links/contact info-->
+  <section id="relevant-links" class="boxed-section">
+    <h1>Relevant Links and Contact Information</h1>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/vnagpal123456/">LinkedIn</a></li>
+      <li><a href="https://github.com/vnagpal25">GitHub</a></li>
+      <li>Email: vansh.nagpal1729@gmail.com</li>
+    </ul>
+  </section>
 
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2023 Your Name</p>
-    </footer>
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2023 Vansh Nagpal</p>
+  </footer>
 </body>
+
 </html>
