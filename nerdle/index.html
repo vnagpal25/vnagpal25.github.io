@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Nerd-le</title>
+  <link rel="stylesheet" href="nerdle_styles.css">
+  <script type="module" src="index.js"></script>
+  <script type="module" src="module.js"></script>
+</head>
+
+<body>
+  <h1>Nerdle</h1>
+  <div class="input-row" id="row1">
+    <input autocomplete="off" type="text" id="letter1" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter2" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter3" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter4" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter5" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+  </div>
+
+  <div class="input-row" id="row2">
+    <input autocomplete="off" type="text" id="letter1" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter2" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter3" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter4" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter5" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+  </div>
+
+  <div class="input-row" id="row3">
+    <input autocomplete="off" type="text" id="letter1" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter2" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter3" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter4" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter5" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+  </div>
+
+  <div class="input-row" id="row4">
+    <input autocomplete="off"="text" id="letter1" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter2" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter3" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter4" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter5" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+  </div>
+
+  <div class="input-row" id="row5">
+    <input autocomplete="off" type="text" id="letter1" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter2" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter3" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter4" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter5" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+  </div>
+
+  <div class="input-row" id="row6">
+    <input autocomplete="off" type="text" id="letter1" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter2" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter3" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter4" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+    <input autocomplete="off" type="text" id="letter5" class="letter-input" maxlength="1" oninput="handleInput(event)"
+      onkeydown="handleKeyDown(event)">
+  </div>
+
+  <p id="win_text">Congratulations, You Won in</p>
+  <p id="lose_text">You lost, the word was </p>
+
+  <div id="top_row" class="keyboard-row">
+    <button class="key">Q</button>
+    <button class="key">W</button>
+    <button class="key">E</button>
+    <button class="key">R</button>
+    <button class="key">T</button>
+    <button class="key">Y</button>
+    <button class="key">U</button>
+    <button class="key">I</button>
+    <button class="key">O</button>
+    <button class="key">P</button>
+  </div>
+
+  <div id="home_row" class="keyboard-row">
+    <button class="key">A</button>
+    <button class="key">S</button>
+    <button class="key">D</button>
+    <button class="key">F</button>
+    <button class="key">G</button>
+    <button class="key">H</button>
+    <button class="key">J</button>
+    <button class="key">K</button>
+    <button class="key">L</button>
+  </div>
+
+  <div id="bottom_row" class="keyboard-row">
+    <button class="key">Z</button>
+    <button class="key">X</button>
+    <button class="key">C</button>
+    <button class="key">V</button>
+    <button class="key">B</button>
+    <button class="key">N</button>
+    <button class="key">M</button>
+  </div>
+</body>
+
+</html>

@@ -6,46 +6,60 @@
 } */
 
 /* Style for the navigation menu */
- header {
+header {
   background-color: #333;
   color: #fff;
   padding: 20px 0;
   position: fixed;
   /* width: 100%; */
-  top: 0; 
+  top: 0;
   z-index: 1;
- }
+}
+
+h1 {
+  font-size: 30px;
+}
+
 /* Style for the tab navigation */
 .tab {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 10px 0; /* Adjust padding as needed */
+  padding: 10px 0;
+  /* Adjust padding as needed */
 }
 
 .tab button {
-  background-color: #333; /* Background color for buttons */
-  color: #fff; /* Text color for buttons */
+  background-color: #333;
+  /* Background color for buttons */
+  color: #fff;
+  /* Text color for buttons */
   border: none;
-  padding: 10px 20px; /* Adjust padding as needed */
-  margin: 5px; /* Adjust margin as needed */
+  padding: 10px 20px;
+  /* Adjust padding as needed */
+  margin: 5px;
+  /* Adjust margin as needed */
   font-size: 16px;
   cursor: pointer;
 }
 
 .tab button:hover {
-  background-color: #555; /* Change color on hover */
+  background-color: #555;
+  /* Change color on hover */
 }
 
 /* Style for the active tab */
 .tab-link.active {
   font-weight: bold;
 }
+
 .boxed-section {
-  background-color: #f0f0f0; /* Background color for the boxed section */
-  width: 800px; /* Fixed width for the section, adjust as needed */
+  background-color: #f0f0f0;
+  /* Background color for the boxed section */
+  width: 800px;
+  /* Fixed width for the section, adjust as needed */
   /* margin: 0 auto; Center the section horizontally on the page */
-  padding: 20px; /* Padding to separate content from background */
+  padding: 20px;
+  /* Padding to separate content from background */
 }
 
-/* Rest of your CSS styles */

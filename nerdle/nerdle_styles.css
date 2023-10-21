@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #e8cfa0;
+  font-family: Arial, Helvetica, sans-serif;
+  /* look up web safe fonts */
+}
+
+.input-row {
+  display: flex;
+  /*Displays the 5 input boxes in a row*/
+  justify-content: center;
+  /*centers the input boxes horizontally*/
+  margin-top: 5px;
+  /* Add margin at the bottom to create vertical spacing on top */
+  margin-bottom: 5px;
+  /* Add margin at the bottom to create vertical spacing on bottom */
+}
+
+.letter-input {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+input.letter-input {
+  caret-color: transparent;
+  /*removes the cursor when in a box*/
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  opacity: 0;
+  text-align: center;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.key {
+  margin-left: 10px;
+  font-size: 35px;
+  width: 40px;
+}
+
+.key:hover {
+  background-color: #aaa;
+}
+
+.key:active {
+  background-color: #888;
+}
+
+.shake {
+  animation: shake-animation 0.8s ease-in-out;
+}
+
+@keyframes shake-animation {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-10px);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  75% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
