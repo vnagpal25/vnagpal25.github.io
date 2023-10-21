@@ -1,4 +1,4 @@
-import { fetchRandomWord as nerdleWord, getGuess, interpretGuess, populateWordHash, shakeRow } from "module.js";
+import { fetchRandomWord as nerdleWord, getGuess, interpretGuess, populateWordHash, shakeRow } from "nerdle/module.js";
 let letterCounts;
 let gameWord;
 let activeRowNum = 1; // flag keeps track of current row
