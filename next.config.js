@@ -18,8 +18,6 @@ module.exports = {
       },
     ],
   },
-  output: 'export',
   basePath: "/vnagpal25.github.io",
   assetPrefix: "/vnagpal25.github.io/",
-  distDir: 'out', // The output directory for the exported files
 }
