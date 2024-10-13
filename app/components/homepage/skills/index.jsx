@@ -314,7 +314,7 @@ function Skills() {
     return skillsImage.find(item => item.name === skillID);
   };
 
-  const SkillIcon = ({ skill, size = 40 }) => {
+  const SkillIcon = ({ skill, size = 10 }) => {
     const skillImage = findSkillImage(skill);
 
     if (!skillImage) return null;
