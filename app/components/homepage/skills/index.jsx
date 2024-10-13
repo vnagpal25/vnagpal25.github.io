@@ -316,9 +316,9 @@ function Skills() {
 
   const SkillIcon = ({ skill }) => {
     const skillImage = findSkillImage(skill);
-  
+
     if (!skillImage) return null;
-  
+
     return (
       <div
         className="h-full w-auto rounded-lg"
@@ -369,9 +369,7 @@ function Skills() {
                 </div>
                 <div className="flex flex-col items-center justify-center gap-3 p-6">
                   <div className="h-8 sm:h-10">
-                    <SkillIcon skill={skill}
-                      src={skillsImage(skill)?.src}
-                    />
+                    <SkillIcon skill={skill} />
                   </div>
                   <p className="text-white text-sm sm:text-lg">
                     {skill}
