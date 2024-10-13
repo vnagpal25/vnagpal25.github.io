@@ -16,7 +16,7 @@ export const projectsData = [
   },
   {
     id: 2,
-    name: 'Learning Management System(LMS) for Programming Languages',
+    name: 'Learning Management System(LMS)',
     description: 'In a world where automation and technology are becoming increasingly ubiquitous, having the knowledge of a programming knowledge can be extremely beneficial to further people\'s career options.For this reason, with a team of peers, I embarked on creating a Learning Management System(LMS) that provides prospective students and teachers alike an interface through which they can learn a new programming language(Python or JavaScript). We implemented our command-line based interface for the LMS in Java, using object-oriented principles and following the SCRUM methodology to track our sprint progress. I was primarily responsible for back-end development; I had to write code for the LMS to seamlessly load and save necessary data regarding grades, classes, and course content in JSON format. This project was extremely beneficial in teaching me about the Software Development Life Cycle.',
     tools: ['Java', 'Python', 'JavaScript', 'SCRUM', 'Software Dev. Life Cycle (SDLC)', ],
     code: 'https://github.com/vnagpal25/Waterboys_LMS',
