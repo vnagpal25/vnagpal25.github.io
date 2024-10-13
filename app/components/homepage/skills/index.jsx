@@ -319,11 +319,16 @@ function Skills() {
 
     if (!skillImage) return null;
 
+    // Modify the SVG string by injecting the width/height attributes
+    const svgWithSize = skillImage.svg.replace(
+      /(<svg[^>]*)(width="[^"]*"|height="[^"]*")*/g,
+      `$1 width="${size}" height="${size}"`
+    );
+
     return (
       <div
         className="h-full w-auto rounded-lg"
-        style={{ width: `${size}px`, height: `${size}px` }}  // Dynamically set the size
-        dangerouslySetInnerHTML={{ __html: skillImage.svg }}
+        dangerouslySetInnerHTML={{ __html: svgWithSize }}  // Use modified SVG
       />
     );
   };
