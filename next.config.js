@@ -17,6 +17,7 @@ module.exports = {
         pathname: '**',
       },
     ],
+    unoptimized: true,
   },
   basePath: process.env.DEPLOYED_GITHUB_PATH || '',
   assetPrefix: "/vnagpal25.github.io/",
