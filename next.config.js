@@ -18,6 +18,6 @@ module.exports = {
       },
     ],
   },
-  basePath: "/vnagpal25.github.io",
+  basePath: process.env.DEPLOYED_GITHUB_PATH || '',
   assetPrefix: "/vnagpal25.github.io/",
 }
