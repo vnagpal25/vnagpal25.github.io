@@ -314,7 +314,7 @@ function Skills() {
     return skillsImage.find(item => item.name === skillID);
   };
 
-  const SkillIcon = ({ skill }) => {
+  const SkillIcon = ({ skill, size = 40 }) => {
     const skillImage = findSkillImage(skill);
 
     if (!skillImage) return null;
@@ -322,11 +322,12 @@ function Skills() {
     return (
       <div
         className="h-full w-auto rounded-lg"
-        style={{ width: '40px', height: '40px' }}
-        dangerouslySetInnerHTML={{ __html: skillImage.svg }} // Insert SVG as inline HTML
+        style={{ width: `${size}px`, height: `${size}px` }}  // Dynamically set the size
+        dangerouslySetInnerHTML={{ __html: skillImage.svg }}
       />
     );
   };
+
 
   return (
     <div id="skills" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
