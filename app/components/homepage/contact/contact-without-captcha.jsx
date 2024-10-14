@@ -54,7 +54,7 @@ function ContactWithoutCaptcha() {
 
   return (
     <div className="">
-      <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">
+      {/* <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">
         Contact with me
       </p>
       <div className="max-w-3xl text-white rounded-lg border border-[#464c6a] p-3 lg:p-5">
@@ -123,7 +123,7 @@ function ContactWithoutCaptcha() {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
