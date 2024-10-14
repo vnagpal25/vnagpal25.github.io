@@ -229,9 +229,3 @@ export const skillsImage = (skill) => {
       break;
   }
 }
-// export const skillsImage = (skill) => {
-//   const skillID = skill.toLowerCase().replace(/\s+/g, '-');
-//   const basePath = process.env.DEPLOYED_GITHUB_PATH || '/vnagpal25.github.io';
-
-//   return `${basePath}/svg/skills/${skillID}.svg`;
-// };

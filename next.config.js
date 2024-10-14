@@ -17,6 +17,8 @@ module.exports = {
         pathname: '**',
       },
     ],
+    loader: 'custom',
+    loaderFile: './my-loader.js',
     unoptimized: true,
   },
   basePath: process.env.DEPLOYED_GITHUB_PATH || '/vnagpal25.github.io',
