@@ -7,7 +7,7 @@ export const personalData = {
   phone: '+1 (734)-545-0962',
   github: 'https://github.com/vnagpal25',
   facebook: 'https://www.facebook.com/abusaid.riyaz/',
-  linkedIn: 'https://www.linkedin.com/in/abu-said-bd/',
+  linkedIn: 'www.linkedin.com/in/vnagpal123456',
   twitter: 'https://twitter.com/said7388',
   stackOverflow: 'https://stackoverflow.com/users/16840768/abu-said',
   resume: "https://drive.google.com/file/d/1bN2N8K3PebolP5JRifGTOuQyVGuCsi8A/view?usp=sharing", 
