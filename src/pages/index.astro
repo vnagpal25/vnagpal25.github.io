@@ -1,0 +1,118 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import headshot from '../assets/headshot.jpg';
+import { site, experience, education } from '../data/site';
+---
+
+<Base>
+  <section class="intro">
+    <Image
+      src={headshot}
+      alt="Vansh Nagpal"
+      width={320}
+      height={320}
+      class="headshot"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <h1>hey, i'm vansh</h1>
+  </section>
+
+  <p>
+    I'm a master's student studying Computer Science and Engineering at the University of
+    Michigan. I'm also a Graduate Student Instructor for <a href="https://eecs280.org" target="_blank" rel="noopener">EECS&nbsp;280</a>, Michigan's
+    introduction to programming and data structures in C++.
+  </p>
+  <p>
+    I'm drawn to the infrastructure underneath large systems, and to making it fast
+    and keeping it up. Lately that means kernel optimization, fault-tolerant design,
+    and scalable ML systems. My current research looks at overload control in
+    distributed systems.
+  </p>
+  <p>
+    This past summer I was a software engineering intern at
+    <a href="https://www.google.com" target="_blank" rel="noopener">Google</a> Cloud on the
+    Hyper Accelerator Virtual Networking team. I built a multi-agent tool that root-causes
+    integration test failures for Network Interface Card (NIC) daemons, such as the RDMA
+    Falcon daemon. Before Michigan, I studied
+    CS and Math at the University of South Carolina. Some things I've
+    built along the way are on my <a href="/projects">projects</a> page.
+  </p>
+  <p>
+    You can reach me at <span class="email">{site.emailDisplay}</span>.
+  </p>
+
+  <p class="links">
+    {
+      site.links.map((l, i) => (
+        <>
+          {i > 0 && <span class="muted" aria-hidden="true"> · </span>}
+          <a href={l.href} target="_blank" rel="noopener">{l.label}</a>
+        </>
+      ))
+    }
+  </p>
+
+  <h2>experience</h2>
+  <ul class="rows">
+    {
+      experience.map((e) => (
+        <li>
+          <span>
+            {e.org}
+            <span class="sub">{e.role}</span>
+          </span>
+          <span class="when">{e.when}</span>
+        </li>
+      ))
+    }
+  </ul>
+
+  <h2>education</h2>
+  <ul class="rows">
+    {
+      education.map((e) => (
+        <li>
+          <span>
+            {e.org}
+            <span class="sub">{e.role}</span>
+          </span>
+          <span class="when">{e.when}</span>
+        </li>
+      ))
+    }
+  </ul>
+</Base>
+
+<style>
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .intro h1 {
+    margin-bottom: 0.25rem;
+  }
+
+  .headshot {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .intro + p {
+    margin-top: 1rem;
+  }
+
+  .email {
+    white-space: nowrap;
+  }
+
+  .links {
+    margin-top: 1.5rem;
+  }
+</style>

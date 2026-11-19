@@ -1,0 +1,36 @@
+---
+import Base from '../layouts/Base.astro';
+import { awards } from '../data/site';
+
+const years = [...new Set(awards.map((a) => a.year))].sort((a, b) => b - a);
+---
+
+<Base title="Awards" description="Awards and honors received by Vansh Nagpal.">
+  <h1>awards</h1>
+
+  {
+    years.map((year) => (
+      <section>
+        <h2>{year}</h2>
+        <ul class="rows">
+          {awards
+            .filter((a) => a.year === year)
+            .map((a) => (
+              <li>
+                <span>
+                  {a.title}
+                  <span class="sub">{a.note}</span>
+                </span>
+              </li>
+            ))}
+        </ul>
+      </section>
+    ))
+  }
+</Base>
+
+<style>
+  section:first-of-type h2 {
+    margin-top: 1.5rem;
+  }
+</style>

@@ -1,0 +1,18 @@
+import { defineCollection } from 'astro:content';
+import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
+
+const projects = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/projects' }),
+  schema: z.object({
+    title: z.string(),
+    tagline: z.string(),
+    // Used for sorting (newest first) and for the date label.
+    start: z.coerce.date(),
+    end: z.coerce.date().optional(), // omit for ongoing work
+    stack: z.array(z.string()).default([]),
+    github: z.url().optional(),
+  }),
+});
+
+export const collections = { projects };

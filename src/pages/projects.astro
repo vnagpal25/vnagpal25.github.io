@@ -1,0 +1,87 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const entries = (await getCollection('projects')).sort(
+  (a, b) => b.data.start.getTime() - a.data.start.getTime(),
+);
+
+const projects = await Promise.all(
+  entries.map(async (entry) => ({ entry, Content: (await render(entry)).Content })),
+);
+
+function dateLabel(start: Date, end?: Date) {
+  const s = start.getUTCFullYear();
+  if (!end) return `${s}–now`;
+  const e = end.getUTCFullYear();
+  return s === e ? `${s}` : `${s}–${String(e).slice(-2)}`;
+}
+---
+
+<Base title="Projects" description="Things Vansh Nagpal has built.">
+  <h1>projects</h1>
+
+  {
+    projects.map(({ entry, Content }) => (
+      <article class="project">
+        <header>
+          <h3>{entry.data.title}</h3>
+          <span class="when muted">{dateLabel(entry.data.start, entry.data.end)}</span>
+        </header>
+        <p class="tagline muted">{entry.data.tagline}</p>
+        <Content />
+        <p class="meta">
+          {entry.data.stack.length > 0 && (
+            <span class="muted">{entry.data.stack.join(' · ')}</span>
+          )}
+          {entry.data.github && (
+            <a href={entry.data.github} target="_blank" rel="noopener">
+              github ↗
+            </a>
+          )}
+        </p>
+      </article>
+    ))
+  }
+</Base>
+
+<style>
+  .project {
+    padding: 1.75rem 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .project:last-of-type {
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .project header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+  }
+
+  .when {
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    font-size: 0.95em;
+  }
+
+  .tagline {
+    font-style: italic;
+    margin: 0.1rem 0 0.75rem;
+  }
+
+  .project :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.25rem 1rem;
+    font-size: 0.92em;
+  }
+</style>
